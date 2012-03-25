@@ -21,33 +21,6 @@ class Finite sym where
 findEquivState :: LearnerState sym -> [sym] -> sym -> [sym]
 findEquivState lstate state sym = undefined
 
--- g0 = LearnerState [[], [A]] 
---      [            [] ]
---      [(  [] ,    [ I ])]
---      [(  [] , A, [ O ]), 
---       (  [] , B, [ O ])]
-
--- g1 = LearnerState [[], [A]] 
---      [            [] ]
---      [(  [] ,    [ I ]),
---       ( [A] ,    [ O ])]
---      [(  [] , A, [ O ]), 
---       (  [] , B, [ O ]), 
---       ( [A] , A, [ I ]),
---       ( [A] , B, [ O ])]
-
--- g2 = LearnerState [[], [A], [B]] 
---      [            [B], [] ]
---      [(  [] ,   [  O ,  I ]), 
---       ( [A] ,   [  O ,  O ]), 
---       ( [B],    [  I ,  O ])]
---      [(  [], A, [  O ,  O ]), 
---       (  [], B, [  I ,  O ]), 
---       ( [A], A, [  O ,  I ]), 
---       ( [A], B, [  O ,  O ]), 
---       ( [B], A, [  O ,  O ]), 
---       ( [B], B, [  O ,  I ])]
-
 instance Show sym => Show (LearnerState sym) where
   show lstate =
     "[R] "  ++ show (getR  lstate) ++ "\n" ++
